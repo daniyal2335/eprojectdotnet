@@ -217,23 +217,25 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" asp-page="/Account/Manage/Index" asp-route-handler="UpdateProfile">
+                            <a class="dropdown-item d-flex align-items-center" asp-page="/Account/Manage/Index">
                                 <i class="bi bi-person"></i>
                                 <span>Edit Profile</span>
                             </a>
                         </li>
                         <li>
-                            <form method="post" asp-page-handler="Delete" class="dropdown-item">
+                            <form method="post" asp-page="/Account/Manage/Index" asp-page-handler="Delete" class="dropdown-item">
                                 <button type="submit" class="btn btn-link text-danger p-0 m-0 align-items-center">
                                     <i class="bi bi-trash"></i>
                                     <span>Delete Profile</span>
                                 </button>
                             </form>
+
                         </li>
                         <li>
                             <partial name="_LoginPartial"></partial>
                         </li>
                     </ul><!-- End Profile Dropdown Items -->
+                    <!-- End Profile Dropdown Items -->
                 </li>
                 <!-- End Profile Nav -->
 
@@ -254,15 +256,15 @@
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="cat" asp-action="Index">
+                <a class="nav-link collapsed" asp-controller="cat" asp-action="AddCategory">
                     <i class="bi bi-menu-button-wide"></i><span>Category</span><i class=" ms-auto"></i>
                 </a>
               
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-controller="pro" asp-action="Index">
-                    <i class="bi bi-menu-button-wide"></i><span>Products</span><i class=" ms-auto"></i>
+                <a class="nav-link collapsed" asp-controller="Menu" asp-action="Index">
+                    <i class="bi bi-menu-button-wide"></i><span>MenuItems</span><i class=" ms-auto"></i>
                 </a>
 
             </li>

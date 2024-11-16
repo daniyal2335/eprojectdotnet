@@ -60,11 +60,13 @@ namespace Eproject.Areas.Identity.Pages.Account.Manage
             [StringLength(100, ErrorMessage = "The name must be at least 2 and at max 100 characters long.", MinimumLength = 2)]
             [Display(Name = "Full Name")]
             public string Name { get; set; }
+            
 
             [Required]
             [StringLength(200, ErrorMessage = "The address must be at least 5 and at max 200 characters long.", MinimumLength = 5)]
             [Display(Name = "Address")]
             public string Address { get; set; }
+            [Required]
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
@@ -91,54 +93,77 @@ namespace Eproject.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound("User not found.");
             }
 
-            await LoadAsync(user);
+            Input = new InputModel
+            {
+                Name = user.Name,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber
+            };
+
             return Page();
         }
 
         public async Task<IActionResult> OnPostUpdateProfileAsync()
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
-            }
-
             if (!ModelState.IsValid)
             {
-                await LoadAsync(user);
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
             {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
-                {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
-                }
+                return NotFound("User not found.");
             }
 
-            await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Profile updated successfully!";
+            // Update fields
+            user.Name = Input.Name;
+            user.Address = Input.Address;
+            user.PhoneNumber = Input.PhoneNumber;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return Page();
+            }
+
+            // Show a success message
+            StatusMessage = "Your profile has been updated";
             return RedirectToPage();
         }
-        public async Task<IActionResult> OnPostDeleteAsync()
+
+        // OnPostDeleteProfileAsync method for deleting profile
+        public async Task<IActionResult> OnPostDeleteProfileAsync()
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound("User not found.");
             }
 
-            // Logic to delete user
-            await _userManager.DeleteAsync(user);
-            return RedirectToPage("/Account/Logout");
+            // Delete user completely
+            var result = await _userManager.DeleteAsync(user);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return Page();
+            }
+
+            // Sign out user after deleting profile
+            await _signInManager.SignOutAsync();
+            return RedirectToPage("/Account/Login");
         }
+
 
     }
 }

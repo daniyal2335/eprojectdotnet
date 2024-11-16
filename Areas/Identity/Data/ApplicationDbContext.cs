@@ -1,4 +1,5 @@
 ﻿using Eproject.Areas.Identity.Data;
+using Eproject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
+    public DbSet<Caterer> Caterers { get; set; }
 
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<MenuItem> MenuItems { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
