@@ -18,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Identity\Views\" />
+    <Folder Include="Views\Admin\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 

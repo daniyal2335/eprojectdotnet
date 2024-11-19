@@ -49,6 +49,7 @@ namespace Eproject.Areas.Identity.Pages.Account
             _emailSender = emailSender;
         }
 
+      
         [BindProperty]
         public InputModel Input { get; set; }
 
@@ -84,7 +85,7 @@ namespace Eproject.Areas.Identity.Pages.Account
             [Phone]
             public string PhoneNumber { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Role is required.")]
             public string Role { get; set; }
         }
 
@@ -92,7 +93,30 @@ namespace Eproject.Areas.Identity.Pages.Account
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            // Fetch users and caterers
+            var usersAndCaterers = await GetAllUsersAndCaterersAsync();
+
+            // Pass them to the view (if required)
+            ViewData["UsersAndCaterers"] = usersAndCaterers;
         }
+        public async Task<List<ApplicationUser>> GetAllUsersAndCaterersAsync()
+        {
+            // Get all users in the "User" role
+            var usersInRoleUser = await _userManager.GetUsersInRoleAsync("User");
+
+            // Get all users in the "Caterer" role
+            var usersInRoleCaterer = await _userManager.GetUsersInRoleAsync("Caterer");
+
+            // Combine both lists
+            var combinedUsers = usersInRoleUser.Concat(usersInRoleCaterer).ToList();
+
+            // Optionally, log the results or return them
+            _logger.LogInformation($"Found {combinedUsers.Count} users with roles 'User' or 'Caterer'.");
+
+            return combinedUsers;
+        }
+
 
 
         // OnPostAsync method
@@ -111,6 +135,8 @@ namespace Eproject.Areas.Identity.Pages.Account
                 user.Name = Input.Name;
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Address = Input.Address;
+                // **Assign Role**
+                user.Role = Input.Role;
 
                 // Ensure the role is selected, otherwise, set a default role
                 if (string.IsNullOrEmpty(Input.Role))
@@ -188,7 +214,32 @@ namespace Eproject.Areas.Identity.Pages.Account
             return Page();
         }
 
+        public async Task<IActionResult> OnPostDeleteUserAsync(string userId)
+        {
+            if (string.IsNullOrEmpty(userId))
+            {
+                return NotFound();
+            }
 
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                var result = await _userManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    // Optionally, add a success message
+                    TempData["Message"] = "User deleted successfully.";
+                }
+                else
+                {
+                    // Optionally, handle failure case
+                    TempData["ErrorMessage"] = "There was an error deleting the user.";
+                }
+            }
+
+            // After deletion, reload the list of users
+            return RedirectToPage(); // Refresh the page
+        }
 
         private ApplicationUser CreateUser()
         {

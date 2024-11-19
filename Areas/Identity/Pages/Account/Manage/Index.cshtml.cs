@@ -10,6 +10,7 @@ using Eproject.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Eproject.Areas.Identity.Pages.Account.Manage
 {
@@ -105,6 +106,8 @@ namespace Eproject.Areas.Identity.Pages.Account.Manage
 
             return Page();
         }
+       
+      
 
         public async Task<IActionResult> OnPostUpdateProfileAsync()
         {
