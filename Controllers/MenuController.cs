@@ -43,7 +43,7 @@ namespace Eproject.Controllers
                     var existingItem = _context.MenuItems.FirstOrDefault(a => a.ItemName == product.ItemName);
                     if (existingItem != null)
                     {
-                        TempData["extError"] = "Item already exists!";
+                        TempData["extError"] = "Invalid Extension";
                         return View(product); 
                     }
 
@@ -67,6 +67,7 @@ namespace Eproject.Controllers
                             MenuItem p = new MenuItem()
                             {
                                 ItemName = product.ItemName,
+                                Des = product.Des,
                                 Price = product.Price,
                                 imagePath = filename,
                                 CategoryId = product.CategoryId
@@ -101,9 +102,9 @@ namespace Eproject.Controllers
             return View(product); 
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var menuItem = _context.MenuItems.Find(id);
+            var menuItem = await _context.MenuItems.FindAsync(id);
             if (menuItem == null)
             {
                 return NotFound();
@@ -115,7 +116,8 @@ namespace Eproject.Controllers
                 ItemName = menuItem.ItemName,
                 Price = menuItem.Price,
                 CategoryId = menuItem.CategoryId,
-                existingImagePath = menuItem.imagePath 
+                Des = menuItem.Des,
+                existingImagePath = menuItem.imagePath,
             };
 
             ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "CategoryName", menuItem.CategoryId);
@@ -144,7 +146,8 @@ namespace Eproject.Controllers
                         return RedirectToAction(nameof(Edit), new { id = product.Id });
                     }
 
-                    string filename = menuItem.imagePath; 
+                    // Image handling
+                    string filename = menuItem.imagePath;
                     if (product.photo != null)
                     {
                         var ext = Path.GetExtension(product.photo.FileName).ToLower();
@@ -180,6 +183,7 @@ namespace Eproject.Controllers
 
                     menuItem.ItemName = product.ItemName;
                     menuItem.Price = product.Price;
+                    menuItem.Des = product.Des;
                     menuItem.CategoryId = product.CategoryId;
                     menuItem.imagePath = filename;
 
@@ -199,6 +203,8 @@ namespace Eproject.Controllers
             ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
+
+
 
         public IActionResult delete(int id)
         {

@@ -7,6 +7,8 @@ namespace Eproject.Migrations
     /// <inheritdoc />
     public partial class menuitem : Migration
     {
+        public static string Des { get; internal set; }
+
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {

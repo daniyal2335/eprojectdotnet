@@ -33,8 +33,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.ItemName)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
+         
+                <th>
+                    @Html.DisplayNameFor(model => model.Des)
+                </th>
+                   <th>
+                    @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.imagePath)
@@ -51,6 +55,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ItemName)
             </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.Des)
+             </td>
+                  
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>

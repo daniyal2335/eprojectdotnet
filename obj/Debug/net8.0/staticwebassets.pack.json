@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Eproject.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\1qwlxwje.qgi.png",
-      "PackagePath": "staticwebassets\\Images\\1qwlxwje.qgi.png"
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\4qprrj0l.g20.png",
+      "PackagePath": "staticwebassets\\Images\\4qprrj0l.g20.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\GF.png",
       "PackagePath": "staticwebassets\\Images\\GF.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\bb5bw2ju.qwp.png",
+      "PackagePath": "staticwebassets\\Images\\bb5bw2ju.qwp.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\d.png",
+      "PackagePath": "staticwebassets\\Images\\d.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\das.png",
@@ -25,16 +33,888 @@
       "PackagePath": "staticwebassets\\Images\\gardenworld.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\jlssve2r.gtc.png",
-      "PackagePath": "staticwebassets\\Images\\jlssve2r.gtc.png"
-    },
-    {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\lawe4y4c.gpg.png",
       "PackagePath": "staticwebassets\\Images\\lawe4y4c.gpg.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\znp5ymxg.3fj.png",
       "PackagePath": "staticwebassets\\Images\\znp5ymxg.3fj.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\bootstrap-datepicker.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\bootstrap-datepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\cyan.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\cyan.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\green.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\green.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\maroon.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\maroon.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\peru.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\peru.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\purple.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\purple.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\salmon.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\salmon.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\yellow.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\yellow.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\color\\yellowgreen.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\color\\yellowgreen.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\custom_animation.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\custom_animation.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\demo.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\font.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\font.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\fonts.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\fonts.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color1.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color1.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color2.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color2.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color3.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color3.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color4.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color4.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color5.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color5.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-color\\color6.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-color\\color6.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-fonts.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-fonts.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\informative-style.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\informative-style.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\magnific-popup.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\magnific-popup.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\main-style.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\main-style.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\nice-select.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\nice-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\simple-line-icons.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\simple-line-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\swiper.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\swiper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\css\\switcher.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\css\\switcher.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\AbrilFatface-Regular.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\AbrilFatface-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\AbrilFatface-Regular.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\AbrilFatface-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Montserrat-Bold.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Montserrat-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Montserrat-Bold.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Montserrat-Bold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Montserrat-Regular.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Montserrat-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Montserrat-Regular.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Montserrat-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Niconne-Regular.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Niconne-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Niconne-Regular.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Niconne-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Simple-Line-Icons.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Simple-Line-Icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Simple-Line-Icons.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Simple-Line-Icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Simple-Line-Icons.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Simple-Line-Icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Simple-Line-Icons.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Simple-Line-Icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\Simple-Line-Icons.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\Simple-Line-Icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\_flaticon.scss"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\flaticon.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\about\\quote.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\about\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\24.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\24.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\coffee.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\coffee.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\cusin.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\cusin.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\food_cover.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\food_cover.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\hand.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\hand.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\mobile.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\icons\\spoon.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\icons\\spoon.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\favicon.ico",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\loader.gif",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\logo.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\01.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\01.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\02.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\02.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\03.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\03.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\04.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\04.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\05.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\05.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\06.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\06.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\07.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\07.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\08.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\08.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\09.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\09.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\10.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\10.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\11.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\11.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\12.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\12.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\menu\\13.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\menu\\13.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\quote.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\quote.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\informative\\signature.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\informative\\signature.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\apple.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\apple.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\banner-bg.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\banner-bg.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\banner-img.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\banner-img.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\bg-pattern.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\bg-pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\c1.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\c1.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\c2.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\c2.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\c3.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\c3.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\c4.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\c4.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\call.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\call.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\close-search.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\close-search.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\down-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\favicon.ico",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\home-banner-bg.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\home-banner-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\loader.gif",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\location.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\location.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\logo.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\mail.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\mail.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\page-title.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\page-title.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\phone.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\phone.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\playstore.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\playstore.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\quote.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\quote.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\sahp2.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\sahp2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\search.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service-shap.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service-shap.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\bento.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\bento.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\buffet.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\buffet.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\cocktail.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\cocktail.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\corporate.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\corporate.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\home.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\home.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\pub.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\pub.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\sit-down.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\sit-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\service\\wedding.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\service\\wedding.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\01.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\02.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\03.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\04.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\leaf.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\leaf.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shap\\tomatto.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shap\\tomatto.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shape-white.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shape-white.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shape.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shape.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shape1.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shape1.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\shapee.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\shapee.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\story.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\story.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\main\\team\\team-icon.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\main\\team\\team-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-1.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-2.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-3.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-4.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-5.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-6.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-7.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\patterns\\pattern-8.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\patterns\\pattern-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\shadow.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\shadow.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\svg\\dish.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\svg\\dish.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\images\\testimonial\\play.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\images\\testimonial\\play.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\SmoothScroll.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\SmoothScroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\appear.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\appear.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\demo-custom.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\demo-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\informative-custom.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\informative-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\jquery.countTo.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\jquery.countTo.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\jquery.mixitup.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\jquery.mixitup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\main-custom.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\main-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\coloredbg.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\coloredbg.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_3x3.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_3x3.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_3x3_white.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_3x3_white.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_white.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\gridtile_white.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\cross_white.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\cross_white.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\mainbannerimg.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\mainbannerimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\restaurant_bg_1-100x50.jpg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\images\\restaurant_bg_1-100x50.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\loader.gif",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\pattern.png",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\assets\\pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\css\\layers.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\css\\layers.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\css\\navigation.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\css\\navigation.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\css\\noneed.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\css\\noneed.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\css\\settings.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\css\\settings.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\font-awesome\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\helper.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\helper.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\pe-icon-7-stroke\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\index.php",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.eot",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.svg",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.ttf",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.woff",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\fonts\\revicons\\revicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.actions.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.actions.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.carousel.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.migration.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.migration.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.navigation.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.navigation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.parallax.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.parallax.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.video.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\extensions\\revolution.extension.video.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.enablelog.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.enablelog.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.revolution.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.revolution.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\smoothscroll.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\smoothscroll.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\swiper.min.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\swiper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\switcher.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\switcher.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Websitelib\\assets\\js\\wow.js",
+      "PackagePath": "staticwebassets\\Websitelib\\assets\\js\\wow.js"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\adminlib\\assets\\css\\style.css",

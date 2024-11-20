@@ -8,6 +8,7 @@ namespace Eproject.Models
         public int MenuItemId { get; set; }
         [Required]
         public string ItemName { get; set; }
+
         [Required]
         public int Price { get; set; }
         [Required]
@@ -16,5 +17,7 @@ namespace Eproject.Models
         // Foreign Key
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        [Required]
+        public string Des { get; set; }
     }
 }
