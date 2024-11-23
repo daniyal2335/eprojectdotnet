@@ -14,7 +14,6 @@ namespace Eproject.Controllers
             _context = context;
         }
 
-        // List Caterers
         public IActionResult Index()
         {
             var caterers = _context.caterers.ToList();
@@ -29,7 +28,7 @@ namespace Eproject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Caterers caterer)
+        public IActionResult Create(Caterer caterer)
         {
             if (ModelState.IsValid)
             {
@@ -51,7 +50,7 @@ namespace Eproject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Caterers caterer)
+        public IActionResult Edit(Caterer caterer)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +72,7 @@ namespace Eproject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Caterers caterer)
+        public IActionResult Delete(Caterer caterer)
         {
             _context.caterers.Remove(caterer);
             _context.SaveChanges();

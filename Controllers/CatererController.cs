@@ -37,44 +37,44 @@ namespace Eproject.Controllers
 
 
         // Caterer Details
-        public IActionResult Details(int id)
-        {
-            var caterer = _context.caterers.FirstOrDefault(c => c.CatererId == id);
-            if (caterer == null)
-            {
-                return NotFound();
-            }
-            return View(caterer);
-        }
+        //public IActionResult Details(int id)
+        //{
+        //    var caterer = _context.caterers.FirstOrDefault(c => c.CatererId == id);
+        //    if (caterer == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(caterer);
+        //}
 
-        // Booking
-        [HttpPost]
-        public IActionResult Book(Booking booking)
-        {
-            if (ModelState.IsValid)
-            {
-                var caterer = _context.caterers.FirstOrDefault(c => c.CatererId == booking.CatererId);
-                if (caterer == null) return NotFound();
+        //// Booking
+        //[HttpPost]
+        //public IActionResult Book(Booking booking)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var caterer = _context.caterers.FirstOrDefault(c => c.CatererId == booking.CatererId);
+        //        if (caterer == null) return NotFound();
 
-                booking.TotalPrice = caterer.PricePerPerson * booking.Menu.Split(',').Length;
+        //        booking.TotalPrice = caterer.PricePerPerson * booking.Menu.Split(',').Length;
 
-                _context.bookings.Add(booking);
-                _context.SaveChanges();
+        //        _context.bookings.Add(booking);
+        //        _context.SaveChanges();
 
-                return RedirectToAction("BookingConfirmation", new { id = booking.BookingId });
-            }
+        //        return RedirectToAction("BookingConfirmation", new { id = booking.BookingId });
+        //    }
 
-            return View(booking);
-        }
+        //    return View(booking);
+        //}
 
 
-        public IActionResult BookingConfirmation(int id)
-        {
-            var booking = _context.bookings.FirstOrDefault(b => b.BookingId == id);
-            if (booking == null) return NotFound();
+        //public IActionResult BookingConfirmation(int id)
+        //{
+        //    var booking = _context.bookings.FirstOrDefault(b => b.BookingId == id);
+        //    if (booking == null) return NotFound();
 
-            return View(booking);
-        }
+        //    return View(booking);
+        //}
 
 
 

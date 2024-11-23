@@ -130,6 +130,7 @@ namespace Eproject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TotalPrice")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Venue")
@@ -170,7 +171,10 @@ namespace Eproject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FoodTypeid")
+                    b.Property<int>("FoodFKId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("MaxPeople")
@@ -185,11 +189,12 @@ namespace Eproject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("PricePerPerson")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("CatererId");
 
-                    b.HasIndex("FoodTypeid");
+                    b.HasIndex("FoodTypeId");
 
                     b.ToTable("caterers");
                 });
@@ -388,7 +393,7 @@ namespace Eproject.Migrations
                 {
                     b.HasOne("Eproject.Models.Foodtype", "Foodtype")
                         .WithMany()
-                        .HasForeignKey("FoodTypeid")
+                        .HasForeignKey("FoodTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
