@@ -43,7 +43,7 @@ namespace Eproject.Controllers
                     var existingItem = _context.MenuItems.FirstOrDefault(a => a.ItemName == product.ItemName);
                     if (existingItem != null)
                     {
-                        TempData["extError"] = "Invalid Extension";
+                        TempData["extError"] = "Item already exists";
                         return View(product); 
                     }
 
@@ -78,7 +78,7 @@ namespace Eproject.Controllers
 
                             ViewBag.msg = "Product Created Successfully!";
                             ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "CategoryName");
-                            return View();
+                            return Redirect("Index");
                         }
                         else
                         {

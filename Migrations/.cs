@@ -5,7 +5,7 @@
 namespace Eproject.Migrations
 {
     /// <inheritdoc />
-    public partial class caterers : Migration
+    public partial class mycaterer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

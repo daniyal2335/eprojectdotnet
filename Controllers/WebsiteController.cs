@@ -12,17 +12,34 @@ namespace Eproject.Controllers
         {
             _context = context;
         }
-        public IActionResult Home()
+        public IActionResult Home(int selectedCategoryId = 0)
         {
-            var cat=_context.Categories.ToList();
-            var menu = _context.MenuItems.ToList();
+            var categories = _context.Categories.ToList();
+
+            // Default to the first category if none is selected
+            if (selectedCategoryId == 0 && categories.Any())
+            {
+                selectedCategoryId = categories.First().CategoryId;
+            }
+
+            var menuItems = _context.MenuItems
+                                    .Where(m => m.CategoryId == selectedCategoryId || selectedCategoryId == 0)
+                                    .ToList();
+
             var viewModel = new viewCategorymenuModel
             {
-                Categories = cat,
-                MenuItems=menu
+                Categories = categories,
+                MenuItems = menuItems,
+                SelectedCategoryId = selectedCategoryId
             };
+
+            ViewData["selectedCategoryId"] = selectedCategoryId;
             return View(viewModel);
         }
+
+
+
+
         public IActionResult Menu()
         {
 
@@ -44,10 +61,7 @@ namespace Eproject.Controllers
         {
             return View();
         }
-        public IActionResult Search()
-        {
-            return View();
-        }
+      
      
     }
 }

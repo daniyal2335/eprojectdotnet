@@ -5,27 +5,27 @@
 namespace Eproject.Migrations
 {
     /// <inheritdoc />
-    public partial class caterer : Migration
+    public partial class Book : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Caterers",
+                name: "caterers",
                 columns: table => new
                 {
-                    CatererID = table.Column<int>(type: "int", nullable: false)
+                    CatererId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Menu = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Place = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FoodType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MaxPeople = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PricePerPerson = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Caterers", x => x.CatererID);
+                    table.PrimaryKey("PK_caterers", x => x.CatererId);
                 });
         }
 
@@ -33,7 +33,7 @@ namespace Eproject.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Caterers");
+                name: "caterers");
         }
     }
 }

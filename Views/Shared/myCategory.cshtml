@@ -1,11 +1,12 @@
 ﻿@model Eproject.Models.Category
 <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-@Model.CategoryId-tab" 
-            data-bs-toggle="pill" 
-            data-bs-target="#pills-@Model.CategoryId" 
-            type="button" role="tab" 
-            aria-controls="pills-@Model.CategoryId" 
-            aria-selected="false">
+    <a class="nav-link @(Model.CategoryId == (int)ViewData["selectedCategoryId"] ? "active" : "")"
+       data-bs-toggle="pill"
+       data-bs-target="#pills-@Model.CategoryId"
+       role="tab"
+       aria-controls="pills-@Model.CategoryId"
+       aria-selected="@(Model.CategoryId == (int)ViewData["selectedCategoryId"] ? "true" : "false")">
         @Model.CategoryName
-    </button>
+    </a>
 </li>
+
