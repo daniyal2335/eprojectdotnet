@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Eproject.Models.Foodtype>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagePath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FoodTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+                    <td>
+                        <img src="~/Images/@Html.DisplayFor(modelItem => item.imagePath)" Style="width:50px;height:50px" />
+                    </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FoodTypeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FoodTypeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FoodTypeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

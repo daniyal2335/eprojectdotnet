@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Eproject.Migrations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Eproject.Models
 {
@@ -19,5 +20,6 @@ namespace Eproject.Models
         public Category Category { get; set; }
         [Required]
         public string Des { get; set; }
+     
     }
 }

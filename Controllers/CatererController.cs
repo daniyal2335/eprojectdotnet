@@ -14,25 +14,25 @@ namespace Eproject.Controllers
             _context = context;
         }
         // Search Caterers
-        public IActionResult Search(string place, string foodType, int? people)
-        {
-            var caterers = _context.caterers.AsQueryable();
+        //public IActionResult Search(string place, string foodType, int? people)
+        //{
+        //    var caterers = _context.caterers.AsQueryable();
 
-            if (!string.IsNullOrEmpty(place))
-                caterers = caterers.Where(c => c.Place.Contains(place));
+        //    if (!string.IsNullOrEmpty(place))
+        //        caterers = caterers.Where(c => c.Place.Contains(place));
 
-            if (!string.IsNullOrEmpty(foodType))
-                caterers = caterers.Where(c => c.FoodType.Contains(foodType));
+        //    if (!string.IsNullOrEmpty(foodType))
+        //        caterers = caterers.Where(c => c.Foodtype.Contains(foodType));
 
-            if (people.HasValue)
-                caterers = caterers.Where(c => c.MaxPeople >= people);
+        //    if (people.HasValue)
+        //        caterers = caterers.Where(c => c.MaxPeople >= people);
 
-            var catererList = caterers.ToList(); 
+        //    var catererList = caterers.ToList(); 
 
-            ViewBag.Caterers = catererList;
+        //    ViewBag.Caterers = catererList;
 
-            return View(catererList);
-        }
+        //    return View(catererList);
+        //}
 
 
 

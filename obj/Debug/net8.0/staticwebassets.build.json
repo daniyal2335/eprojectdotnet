@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "grhaDCrmPQHFMcagxQYAY1mxSD4CrRZiZTAt7vJS7ec=",
+  "Hash": "i/usSe2Nb4yii1dZi9r2HU4NBNHoUXv41UHoei8wsK4=",
   "Source": "Eproject",
   "BasePath": "_content/Eproject",
   "Mode": "Default",
@@ -10733,6 +10733,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\0faodg50.04j.png",
+      "SourceId": "Eproject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\",
+      "BasePath": "_content/Eproject",
+      "RelativePath": "Images/0faodg50.04j.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\0faodg50.04j.png"
+    },
+    {
       "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\3imbjz05.pfm.png",
       "SourceId": "Eproject",
       "SourceType": "Discovered",
@@ -10790,6 +10809,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\4qprrj0l.g20.png"
     },
     {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\aikplojs.y2k.png",
+      "SourceId": "Eproject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\",
+      "BasePath": "_content/Eproject",
+      "RelativePath": "Images/aikplojs.y2k.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\aikplojs.y2k.png"
+    },
+    {
       "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\bb5bw2ju.qwp.png",
       "SourceId": "Eproject",
       "SourceType": "Discovered",
@@ -10809,12 +10847,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\bb5bw2ju.qwp.png"
     },
     {
-      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\das.png",
+      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\cs0tjmwh.gh4.png",
       "SourceId": "Eproject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\",
       "BasePath": "_content/Eproject",
-      "RelativePath": "Images/das.png",
+      "RelativePath": "Images/cs0tjmwh.gh4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -10825,7 +10863,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\das.png"
+      "OriginalItemSpec": "wwwroot\\Images\\cs0tjmwh.gh4.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\d1f38885-9d6d-4531-88c7-dce6b5936172.png",
+      "SourceId": "Eproject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\",
+      "BasePath": "_content/Eproject",
+      "RelativePath": "Images/d1f38885-9d6d-4531-88c7-dce6b5936172.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\d1f38885-9d6d-4531-88c7-dce6b5936172.png"
     },
     {
       "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\ecommerce.png",
@@ -10864,6 +10921,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\fhtt.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\fk1b4jo1.e1a.png",
+      "SourceId": "Eproject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\",
+      "BasePath": "_content/Eproject",
+      "RelativePath": "Images/fk1b4jo1.e1a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\fk1b4jo1.e1a.png"
     },
     {
       "Identity": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\gardenworld.png",

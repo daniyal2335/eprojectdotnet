@@ -4,6 +4,7 @@ using Eproject.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eproject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241123134127_food")]
+    partial class food
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -170,9 +173,6 @@ namespace Eproject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FoodTypeid")
-                        .HasColumnType("int");
-
                     b.Property<int>("MaxPeople")
                         .HasColumnType("int");
 
@@ -189,33 +189,7 @@ namespace Eproject.Migrations
 
                     b.HasKey("CatererId");
 
-                    b.HasIndex("FoodTypeid");
-
                     b.ToTable("caterers");
-                });
-
-            modelBuilder.Entity("Eproject.Models.Foodtype", b =>
-                {
-                    b.Property<int>("FoodTypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FoodTypeId"));
-
-                    b.Property<string>("FoodTypeName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("imagePath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("price")
-                        .HasColumnType("int");
-
-                    b.HasKey("FoodTypeId");
-
-                    b.ToTable("foodtypes");
                 });
 
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>
@@ -382,17 +356,6 @@ namespace Eproject.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Eproject.Models.Caterers", b =>
-                {
-                    b.HasOne("Eproject.Models.Foodtype", "Foodtype")
-                        .WithMany()
-                        .HasForeignKey("FoodTypeid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Foodtype");
                 });
 
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>

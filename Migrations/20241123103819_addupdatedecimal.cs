@@ -5,12 +5,12 @@
 namespace Eproject.Migrations
 {
     /// <inheritdoc />
-    public partial class mycaterer : Migration
+    public partial class addupdatedecimal : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
+            
         }
 
         /// <inheritdoc />
