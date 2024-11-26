@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\Eproject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\06ff2a51-8aab-42b0-9430-7ae0c7f0bc1b.avif",
+      "PackagePath": "staticwebassets\\Images\\06ff2a51-8aab-42b0-9430-7ae0c7f0bc1b.avif"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\180c1f12-4498-4e14-b74c-d15972ed5928.jpeg",
+      "PackagePath": "staticwebassets\\Images\\180c1f12-4498-4e14-b74c-d15972ed5928.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\1db0ea74-b811-45d4-b1bc-955e020b2e87.jpg",
+      "PackagePath": "staticwebassets\\Images\\1db0ea74-b811-45d4-b1bc-955e020b2e87.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\3imbjz05.pfm.png",
       "PackagePath": "staticwebassets\\Images\\3imbjz05.pfm.png"
     },
@@ -13,28 +25,32 @@
       "PackagePath": "staticwebassets\\Images\\4jyerlop.fme.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\4qprrj0l.g20.png",
-      "PackagePath": "staticwebassets\\Images\\4qprrj0l.g20.png"
-    },
-    {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\GF.png",
       "PackagePath": "staticwebassets\\Images\\GF.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\a0s2xctm.d3o.png",
-      "PackagePath": "staticwebassets\\Images\\a0s2xctm.d3o.png"
-    },
-    {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\a589298f-014b-4a65-a3c5-3c597c64ebcf.png",
-      "PackagePath": "staticwebassets\\Images\\a589298f-014b-4a65-a3c5-3c597c64ebcf.png"
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\a2e4f0be-98f6-4a5e-8b70-13d658d273e1.avif",
+      "PackagePath": "staticwebassets\\Images\\a2e4f0be-98f6-4a5e-8b70-13d658d273e1.avif"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\aikplojs.y2k.png",
       "PackagePath": "staticwebassets\\Images\\aikplojs.y2k.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\bb5bw2ju.qwp.png",
-      "PackagePath": "staticwebassets\\Images\\bb5bw2ju.qwp.png"
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\b.jpeg",
+      "PackagePath": "staticwebassets\\Images\\b.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\bb85477f-0587-4257-ba85-0f81a9a24f68.jpeg",
+      "PackagePath": "staticwebassets\\Images\\bb85477f-0587-4257-ba85-0f81a9a24f68.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\cb114776-7c00-4d9a-aede-c9d558e89c23.jpeg",
+      "PackagePath": "staticwebassets\\Images\\cb114776-7c00-4d9a-aede-c9d558e89c23.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\ch.png",
+      "PackagePath": "staticwebassets\\Images\\ch.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\cs0tjmwh.gh4.png",
@@ -45,8 +61,8 @@
       "PackagePath": "staticwebassets\\Images\\d1f38885-9d6d-4531-88c7-dce6b5936172.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\ecommerce.png",
-      "PackagePath": "staticwebassets\\Images\\ecommerce.png"
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\e6a561cc-4ad6-4066-a338-579a1ad314cd.jpeg",
+      "PackagePath": "staticwebassets\\Images\\e6a561cc-4ad6-4066-a338-579a1ad314cd.jpeg"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\fhtt.png",
@@ -65,8 +81,12 @@
       "PackagePath": "staticwebassets\\Images\\lawe4y4c.gpg.png"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\xgt2xto2.wxt.png",
-      "PackagePath": "staticwebassets\\Images\\xgt2xto2.wxt.png"
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\m.jpeg",
+      "PackagePath": "staticwebassets\\Images\\m.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\wk.jpeg",
+      "PackagePath": "staticwebassets\\Images\\wk.jpeg"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\xpttrock.43f.png",

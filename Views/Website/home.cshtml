@@ -73,38 +73,13 @@
                         </h2>
                     </div>
                 </div>
+                   @foreach (var foodType in Model.foodtypes){
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="cat-top-dish-section">
-                        <div class="cat-top-dish-inner">
-                            <div class="cat-top-dish-img">
-                                <img src="https://dummyimage.com/500x300/787878/666" alt="">
-                            </div>
-                            <div class="cat-top-dish-info">
-                                <a href="javascript:void(0);">
-                                    <h4>Delicious Sweets <span>$50</span></h4>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                     
+                  <partial name="FoodType" model="foodType" ></partial>
+                  </div> 
+                   }
+              @*   <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="cat-top-dish-section">
                         <div class="cat-top-dish-inner">
                             <div class="cat-top-dish-img">
@@ -228,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12"> 
                     <div class="cat-top-dish-section">
                         <div class="cat-top-dish-inner">
                             <div class="cat-top-dish-img">
@@ -258,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
 
             </div>
         </div>
@@ -449,83 +424,110 @@
             </div>
         </div>
     </section>
-<section class="cat-booking-wrapper" id="bookNow">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="cat-booking-form">
-                    <span class="cat-shapp"></span>
-                    <span class="cat-shapp2"></span>
+ <!-- Booking -->
+        <section class="cat-booking-wrapper" id="bookNow">
+            <div class="container">
+                <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="cat-heading-wrapper">
-                            <h4>Book us</h4>
-                            <h2>Where you want Our Services</h2>
-                        </div>
-                    </div>
-                    <div class="cat-booking-from-inner">
-                        <form asp-action="Book" method="post">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="CatererId" class="nice-selection">
-                                            <option value="0">Select Caterer</option>
-                                                @if (ViewBag.Caterers != null && ViewBag.Caterers.Any())
-                                                {
-                                                    @foreach (var caterer in ViewBag.Caterers)
-                                                    {
-                                                        <option value="@caterer.CatererId">@caterer.Name</option>
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    <option>No Caterers Available</option>
-                                                }
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="date" name="BookingDate" class="nice-selection">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="text" name="Venue" class="nice-selection" placeholder="Enter Venue">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <textarea name="Menu" class="nice-selection" placeholder="Enter Menu"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="text" name="CustomerName" class="nice-selection" placeholder="Enter Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="email" name="CustomerEmail" class="nice-selection" placeholder="Enter Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="tel" name="CustomerPhone" class="nice-selection" placeholder="Enter Your Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                                    <button type="submit" class="cat-btn">Send Request</button>
+                        <div class="cat-booking-form">
+                            <span class="cat-shapp"></span>
+                            <span class="cat-shapp2"></span>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="cat-heading-wrapper">
+                                    <h4>
+                                        Book us
+                                    </h4>
+                                    <h2>
+                                        Where you want Our Services
+                                    </h2>
                                 </div>
                             </div>
-                        </form>
+                            <div class="cat-booking-from-inner">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">Select Country</option>
+                                                <option value="1">USA</option>
+                                                <option value="2">UK</option>
+                                                <option value="3">India</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">Select City</option>
+                                                <option value="1">Depend on Country</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">Select Palace</option>
+                                                <option value="1">Depend on City</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">Event Type</option>
+                                                <option value="1">Big Event</option>
+                                                <option value="1">Small Event</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">No. of People</option>
+                                                <option value="1">100-200</option>
+                                                <option value="2">200-300</option>
+                                                <option value="3">300-400</option>
+                                                <option value="3">400-1000</option>
+                                                <option value="3">1000-5000</option>
+                                                <option value="3">5000 +</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <select name="" id="" class="nice-selection">
+                                                <option value="0">Vegetarian</option>
+                                                <option value="1">Non Vegeterian</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="Enter Contact No.">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <input type="date" placeholder="Select Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="Enter Your Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                                        <a href="javascript:void(0);" class="cat-btn">
+                                            Send Request
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 
     <!-- Video -->
     <section class="cat-video-wrapper has-bg">

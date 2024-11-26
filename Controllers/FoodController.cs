@@ -142,7 +142,7 @@ namespace Eproject.Controllers
                         var ext = Path.GetExtension(food.Photo.FileName).ToLower();
                         var size = food.Photo.Length;
 
-                        if ((ext.Equals(".jpg") || ext.Equals(".png") || ext.Equals(".webp") || ext.Equals(".jpeg")) && size < 1000000)
+                        if ((ext.Equals(".jpg") || ext.Equals(".png") || ext.Equals(".webp") || ext.Equals(".jpeg") || ext.Equals(".avif")) && size < 1000000)
                         {
                             string folder = Path.Combine(_env.WebRootPath, "Images");
 

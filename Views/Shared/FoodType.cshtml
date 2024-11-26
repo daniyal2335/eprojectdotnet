@@ -1,0 +1,24 @@
+﻿@model Eproject.Models.Foodtype
+<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="cat-top-dish-section">
+        <div class="cat-top-dish-inner">
+            <div class="cat-top-dish-img">
+                <img src="/Images/@Model.imagePath" class="responsive-img">
+            </div>
+            <div class="cat-top-dish-info">
+                <a href="javascript:void(0);">
+                    <h4 data-full-text="@Model.FoodTypeName">@Model.FoodTypeName <span>@Model.price</span></h4>
+
+
+                </a>
+                <ul class="stars">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

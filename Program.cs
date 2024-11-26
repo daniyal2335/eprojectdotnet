@@ -39,7 +39,7 @@ app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=cat}/{action=Index}/{id?}");
+    pattern: "{controller=Website}/{action=Home}/{id?}");
 
 // Seed roles and admin user AFTER the app has run
 using (var scope = app.Services.CreateScope())

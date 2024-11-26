@@ -33,40 +33,35 @@ public class AdminController : Controller
     [HttpPost]
     public IActionResult Create(Caterer caterer, List<int> selectedFoodTypeIds)
     {
-        // Ensure that the model is valid before proceeding
         if (selectedFoodTypeIds == null || !selectedFoodTypeIds.Any())
         {
-            // If no food types are selected, add an error to the ModelState (optional)
             ModelState.AddModelError("selectedFoodTypeIds", "At least one food type must be selected.");
         }
 
         if (ModelState.IsValid)
         {
-            // Add the caterer to the database
             _context.caterers.Add(caterer);
-            _context.SaveChanges();  // Save caterer to get CatererId
+            _context.SaveChanges();  
 
-            // If food types are selected, add them to the join table (CatererFoodtype)
             if (selectedFoodTypeIds != null && selectedFoodTypeIds.Any())
             {
                 foreach (var foodTypeId in selectedFoodTypeIds)
                 {
                     var catererFoodType = new CatererFoodtype
                     {
-                        CatererId = caterer.CatererId,  // Assign CatererId to the join table
-                        FoodTypeId = foodTypeId        // Assign selected FoodTypeId to the join table
+                        CatererId = caterer.CatererId,  
+                        FoodTypeId = foodTypeId        
                     };
-                    _context.CatererFoodtypes.Add(catererFoodType);  // Add to the join table
+                    _context.CatererFoodtypes.Add(catererFoodType);  
                 }
-                _context.SaveChanges();  // Save food types
+                _context.SaveChanges(); 
             }
 
-            return RedirectToAction("Index"); // Redirect to the index page after successful creation
+            return RedirectToAction("Index"); 
         }
 
-        // If validation fails, reload the list of food types to display again
         ViewBag.FoodTypes = _context.foodtypes.ToList();
-        return View(caterer); // Return to view with errors
+        return View(caterer); 
     }
 
     public IActionResult Edit(int id)
@@ -78,16 +73,15 @@ public class AdminController : Controller
 
         if (caterer == null)
         {
-            return NotFound(); // Return 404 if caterer not found
+            return NotFound(); 
         }
 
-        ViewBag.FoodTypes = _context.foodtypes.ToList(); // Load food types for selection
-        var selectedFoodTypeIds = caterer.CatererFoodtypes.Select(cf => cf.FoodTypeId).ToList(); // Get selected food types
+        ViewBag.FoodTypes = _context.foodtypes.ToList(); 
+        var selectedFoodTypeIds = caterer.CatererFoodtypes.Select(cf => cf.FoodTypeId).ToList(); 
 
-        // Pass caterer and selected food type IDs directly to the view
         ViewBag.SelectedFoodTypeIds = selectedFoodTypeIds;
 
-        return View(caterer); // Directly pass the caterer to the view
+        return View(caterer); 
     }
     [HttpPost]
     public IActionResult Edit(Caterer caterer, List<int> selectedFoodTypeIds)
@@ -108,17 +102,14 @@ public class AdminController : Controller
                 return NotFound();
             }
 
-            // Update the existing caterer details
             existingCaterer.Name = caterer.Name;
             existingCaterer.Place = caterer.Place;
             existingCaterer.MaxPeople = caterer.MaxPeople;
             existingCaterer.Description = caterer.Description;
             existingCaterer.PricePerPerson = caterer.PricePerPerson;
 
-            // Remove existing food type associations
             _context.CatererFoodtypes.RemoveRange(existingCaterer.CatererFoodtypes);
 
-            // Add new food type associations
             foreach (var foodTypeId in selectedFoodTypeIds)
             {
                 var catererFoodType = new CatererFoodtype
@@ -129,52 +120,48 @@ public class AdminController : Controller
                 _context.CatererFoodtypes.Add(catererFoodType);
             }
 
-            _context.SaveChanges(); // Save the changes to the database
-            return RedirectToAction("Index"); // Redirect to the index page
+            _context.SaveChanges(); 
+            return RedirectToAction("Index"); 
         }
 
-        // Reload the food types if validation fails
         ViewBag.FoodTypes = _context.foodtypes.ToList();
         ViewBag.SelectedFoodTypeIds = selectedFoodTypeIds;
 
-        return View(caterer); // Return to the view with validation errors
+        return View(caterer); 
     }
     public IActionResult Delete(int id)
     {
-        // Fetch the caterer and related food types to confirm the delete action
         var caterer = _context.caterers
-            .Include(c => c.CatererFoodtypes) // Include related food types
-            .ThenInclude(cf => cf.FoodType)  // Include FoodType data
+            .Include(c => c.CatererFoodtypes) 
+            .ThenInclude(cf => cf.FoodType) 
             .FirstOrDefault(c => c.CatererId == id);
 
         if (caterer == null)
         {
-            return NotFound();  // If the caterer doesn't exist, return 404
+            return NotFound();  
         }
 
-        return View(caterer);  // Pass the caterer data to the view for confirmation
+        return View(caterer); 
     }
     [HttpPost, ActionName("Delete")]
     public IActionResult DeleteConfirmed(int id)
     {
         var caterer = _context.caterers
-            .Include(c => c.CatererFoodtypes) // Include related food types for removal
+            .Include(c => c.CatererFoodtypes) 
             .FirstOrDefault(c => c.CatererId == id);
 
         if (caterer == null)
         {
-            return NotFound();  // If the caterer doesn't exist, return 404
+            return NotFound();  
         }
 
-        // Remove related food types from the join table
         _context.CatererFoodtypes.RemoveRange(caterer.CatererFoodtypes);
 
-        // Remove the caterer itself
         _context.caterers.Remove(caterer);
 
-        _context.SaveChanges();  // Save changes to the database
+        _context.SaveChanges();  
 
-        return RedirectToAction("Index");  // Redirect to the list of caterers after deletion
+        return RedirectToAction("Index");  
     }
 
 

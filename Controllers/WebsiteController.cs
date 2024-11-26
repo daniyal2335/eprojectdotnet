@@ -25,12 +25,14 @@ namespace Eproject.Controllers
             var menuItems = _context.MenuItems
                                     .Where(m => m.CategoryId == selectedCategoryId || selectedCategoryId == 0)
                                     .ToList();
+            var foodTypes = _context.foodtypes.ToList();
 
             var viewModel = new viewCategorymenuModel
             {
                 Categories = categories,
                 MenuItems = menuItems,
-                SelectedCategoryId = selectedCategoryId
+                SelectedCategoryId = selectedCategoryId,
+                foodtypes = foodTypes
             };
 
             ViewData["selectedCategoryId"] = selectedCategoryId;
