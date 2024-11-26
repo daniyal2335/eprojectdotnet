@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Eproject.Models;
 
@@ -17,5 +18,6 @@ public partial class Caterer
 
     public int PricePerPerson { get; set; }
 
-    public int? FoodTypeId { get; set; }
+    [Required]
+    public ICollection<CatererFoodtype> CatererFoodtypes { get; set; } = new List<CatererFoodtype>();
 }

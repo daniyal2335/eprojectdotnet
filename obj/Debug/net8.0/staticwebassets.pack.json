@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\Eproject.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\0faodg50.04j.png",
-      "PackagePath": "staticwebassets\\Images\\0faodg50.04j.png"
-    },
-    {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\3imbjz05.pfm.png",
       "PackagePath": "staticwebassets\\Images\\3imbjz05.pfm.png"
     },
@@ -23,6 +19,14 @@
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\GF.png",
       "PackagePath": "staticwebassets\\Images\\GF.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\a0s2xctm.d3o.png",
+      "PackagePath": "staticwebassets\\Images\\a0s2xctm.d3o.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\a589298f-014b-4a65-a3c5-3c597c64ebcf.png",
+      "PackagePath": "staticwebassets\\Images\\a589298f-014b-4a65-a3c5-3c597c64ebcf.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\aikplojs.y2k.png",
@@ -59,6 +63,10 @@
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\lawe4y4c.gpg.png",
       "PackagePath": "staticwebassets\\Images\\lawe4y4c.gpg.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\xgt2xto2.wxt.png",
+      "PackagePath": "staticwebassets\\Images\\xgt2xto2.wxt.png"
     },
     {
       "Id": "C:\\Users\\PC\\source\\repos\\Eproject\\Eproject\\wwwroot\\Images\\xpttrock.43f.png",

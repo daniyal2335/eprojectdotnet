@@ -6,7 +6,6 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,55 +13,76 @@
 </head>
 <body>
 
-<h4>Caterer</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Place" class="control-label"></label>
-                <input asp-for="Place" class="form-control" />
-                <span asp-validation-for="Place" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaxPeople" class="control-label"></label>
-                <input asp-for="MaxPeople" class="form-control" />
-                <span asp-validation-for="MaxPeople" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PricePerPerson" class="control-label"></label>
-                <input asp-for="PricePerPerson" class="form-control" />
-                <span asp-validation-for="PricePerPerson" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FoodTypeId" class="control-label"></label>
-                <input asp-for="FoodTypeId" class="form-control" />
-                <span asp-validation-for="FoodTypeId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <h4>Create Caterer</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+
+                <!-- Other Fields -->
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Place" class="control-label"></label>
+                    <input asp-for="Place" class="form-control" />
+                    <span asp-validation-for="Place" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaxPeople" class="control-label"></label>
+                    <input asp-for="MaxPeople" class="form-control" />
+                    <span asp-validation-for="MaxPeople" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PricePerPerson" class="control-label"></label>
+                    <input asp-for="PricePerPerson" class="form-control" />
+                    <span asp-validation-for="PricePerPerson" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Food Types</label>
+                    <div>
+                        @foreach (var foodType in ViewBag.FoodTypes as List<Eproject.Models.Foodtype>)
+                        {
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="FoodType_@foodType.FoodTypeId"
+                                       name="selectedFoodTypeIds" value="@foodType.FoodTypeId" />
+                                <label class="form-check-label" for="FoodType_@foodType.FoodTypeId">@foodType.FoodTypeName</label>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
 </body>
 </html>

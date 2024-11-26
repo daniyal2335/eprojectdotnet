@@ -12,5 +12,7 @@ namespace Eproject.Models
         public int price { get; set; }
         [Required]
         public string imagePath {  get; set; }
+        // Navigation property for CatererFoodtypes
+        public ICollection<CatererFoodtype> CatererFoodtypes { get; set; }
     }
 }

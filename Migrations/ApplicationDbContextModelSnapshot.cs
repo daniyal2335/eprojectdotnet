@@ -159,7 +159,7 @@ namespace Eproject.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Eproject.Models.Caterers", b =>
+            modelBuilder.Entity("Eproject.Models.Caterer", b =>
                 {
                     b.Property<int>("CatererId")
                         .ValueGeneratedOnAdd()
@@ -170,12 +170,6 @@ namespace Eproject.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FoodFKId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FoodTypeId")
-                        .HasColumnType("int");
 
                     b.Property<int>("MaxPeople")
                         .HasColumnType("int");
@@ -188,15 +182,35 @@ namespace Eproject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("PricePerPerson")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("PricePerPerson")
+                        .HasColumnType("int");
 
                     b.HasKey("CatererId");
 
+                    b.ToTable("caterers");
+                });
+
+            modelBuilder.Entity("Eproject.Models.CatererFoodtype", b =>
+                {
+                    b.Property<int>("CatererFoodtypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CatererFoodtypeId"));
+
+                    b.Property<int>("CatererId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CatererFoodtypeId");
+
+                    b.HasIndex("CatererId");
+
                     b.HasIndex("FoodTypeId");
 
-                    b.ToTable("caterers");
+                    b.ToTable("CatererFoodtypes");
                 });
 
             modelBuilder.Entity("Eproject.Models.Foodtype", b =>
@@ -389,15 +403,23 @@ namespace Eproject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Eproject.Models.Caterers", b =>
+            modelBuilder.Entity("Eproject.Models.CatererFoodtype", b =>
                 {
-                    b.HasOne("Eproject.Models.Foodtype", "Foodtype")
-                        .WithMany()
+                    b.HasOne("Eproject.Models.Caterer", "Caterer")
+                        .WithMany("CatererFoodtypes")
+                        .HasForeignKey("CatererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Eproject.Models.Foodtype", "FoodType")
+                        .WithMany("CatererFoodtypes")
                         .HasForeignKey("FoodTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Foodtype");
+                    b.Navigation("Caterer");
+
+                    b.Navigation("FoodType");
                 });
 
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>
@@ -460,6 +482,16 @@ namespace Eproject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Eproject.Models.Caterer", b =>
+                {
+                    b.Navigation("CatererFoodtypes");
+                });
+
+            modelBuilder.Entity("Eproject.Models.Foodtype", b =>
+                {
+                    b.Navigation("CatererFoodtypes");
                 });
 #pragma warning restore 612, 618
         }

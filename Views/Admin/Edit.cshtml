@@ -46,11 +46,19 @@
                 <input asp-for="PricePerPerson" class="form-control" />
                 <span asp-validation-for="PricePerPerson" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FoodTypeId" class="control-label"></label>
-                <input asp-for="FoodTypeId" class="form-control" />
-                <span asp-validation-for="FoodTypeId" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Food Types</label>
+                    <div>
+                        @foreach (var foodType in ViewBag.FoodTypes as List<Eproject.Models.Foodtype>)
+                        {
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="FoodType_@foodType.FoodTypeId"
+                                       name="selectedFoodTypeIds" value="@foodType.FoodTypeId" />
+                                <label class="form-check-label" for="FoodType_@foodType.FoodTypeId">@foodType.FoodTypeName</label>
+                            </div>
+                        }
+                    </div>
+                </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
