@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eproject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241122115720_booking")]
-    partial class booking
+    [Migration("20241128143538_Book")]
+    partial class Book
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,30 +118,29 @@ namespace Eproject.Migrations
 
                     b.Property<string>("CustomerEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("CustomerName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("CustomerPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Menu")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Venue")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("BookingId");
 
-                    b.ToTable("bookings");
+                    b.HasIndex("CatererId");
+
+                    b.ToTable("Bookings");
                 });
 
             modelBuilder.Entity("Eproject.Models.Category", b =>
@@ -161,7 +160,7 @@ namespace Eproject.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Eproject.Models.Caterers", b =>
+            modelBuilder.Entity("Eproject.Models.Caterer", b =>
                 {
                     b.Property<int>("CatererId")
                         .ValueGeneratedOnAdd()
@@ -170,10 +169,6 @@ namespace Eproject.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CatererId"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FoodType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -188,12 +183,63 @@ namespace Eproject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("PricePerPerson")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("PricePerPerson")
+                        .HasColumnType("int");
+
+                    b.Property<string>("imagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CatererId");
 
                     b.ToTable("caterers");
+                });
+
+            modelBuilder.Entity("Eproject.Models.CatererFoodtype", b =>
+                {
+                    b.Property<int>("CatererFoodtypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CatererFoodtypeId"));
+
+                    b.Property<int>("CatererId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FoodTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CatererFoodtypeId");
+
+                    b.HasIndex("CatererId");
+
+                    b.HasIndex("FoodTypeId");
+
+                    b.ToTable("CatererFoodtypes");
+                });
+
+            modelBuilder.Entity("Eproject.Models.Foodtype", b =>
+                {
+                    b.Property<int>("FoodTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FoodTypeId"));
+
+                    b.Property<string>("FoodTypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("imagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("price")
+                        .HasColumnType("int");
+
+                    b.HasKey("FoodTypeId");
+
+                    b.ToTable("foodtypes");
                 });
 
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>
@@ -362,6 +408,36 @@ namespace Eproject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Eproject.Models.Booking", b =>
+                {
+                    b.HasOne("Eproject.Models.Caterer", "Caterer")
+                        .WithMany()
+                        .HasForeignKey("CatererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Caterer");
+                });
+
+            modelBuilder.Entity("Eproject.Models.CatererFoodtype", b =>
+                {
+                    b.HasOne("Eproject.Models.Caterer", "Caterer")
+                        .WithMany("CatererFoodtypes")
+                        .HasForeignKey("CatererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Eproject.Models.Foodtype", "FoodType")
+                        .WithMany("CatererFoodtypes")
+                        .HasForeignKey("FoodTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Caterer");
+
+                    b.Navigation("FoodType");
+                });
+
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>
                 {
                     b.HasOne("Eproject.Models.Category", "Category")
@@ -422,6 +498,16 @@ namespace Eproject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Eproject.Models.Caterer", b =>
+                {
+                    b.Navigation("CatererFoodtypes");
+                });
+
+            modelBuilder.Entity("Eproject.Models.Foodtype", b =>
+                {
+                    b.Navigation("CatererFoodtypes");
                 });
 #pragma warning restore 612, 618
         }

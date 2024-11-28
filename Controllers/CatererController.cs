@@ -2,6 +2,7 @@
 using Eproject.Migrations;
 using Eproject.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Eproject.Controllers
 {
@@ -37,17 +38,36 @@ namespace Eproject.Controllers
 
 
         // Caterer Details
-        //public IActionResult Details(int id)
-        //{
-        //    var caterer = _context.caterers.FirstOrDefault(c => c.CatererId == id);
-        //    if (caterer == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(caterer);
-        //}
+        public IActionResult Details(int id)
+        {
+            var caterer = _context.caterers
+                .Include(c => c.CatererFoodtypes)
+                    .ThenInclude(cf => cf.FoodType)
+                .FirstOrDefault(c => c.CatererId == id);
 
-        //// Booking
+            if (caterer == null)
+            {
+                return NotFound();
+            }
+
+            // Map to ViewModel if needed
+            var viewModel = new viewCaterer
+            {
+                CatererId = caterer.CatererId,
+                Name = caterer.Name,
+                //imagePath = caterer.Photo,
+                Place = caterer.Place,
+                MaxPeople = caterer.MaxPeople,
+                PricePerPerson = caterer.PricePerPerson,
+                Description = caterer.Description,
+                CatererFoodtypes = caterer.CatererFoodtypes
+            };
+
+            return View(viewModel);
+        }
+
+
+        // Booking
         //[HttpPost]
         //public IActionResult Book(Booking booking)
         //{

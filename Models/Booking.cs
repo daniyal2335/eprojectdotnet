@@ -1,18 +1,32 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Eproject.Models
 {
     public class Booking
     {
         [Key]
-        public int BookingId { get; set; }
-        public int CatererId { get; set; }
-        public DateTime BookingDate { get; set; }
-        public string Venue { get; set; }
-        public string Menu { get; set; }
-        public decimal TotalPrice { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerEmail { get; set; }
-        public string CustomerPhone { get; set; }
+        public int BookingId { get; set; }  
+
+        [Required]
+        public DateTime BookingDate { get; set; } 
+
+        [Required]
+        [MaxLength(255)]
+        public string Venue { get; set; } 
+
+        [Required]
+        [MaxLength(255)]
+        public string CustomerName { get; set; } 
+
+        [MaxLength(15)]
+        public string CustomerPhone { get; set; } = null!;  
+
+        [MaxLength(255)]
+        public string CustomerEmail { get; set; } = null!;
+
+        public int CatererId { get; set; } 
+
+        public  Caterer Caterer { get; set; }
     }
 }

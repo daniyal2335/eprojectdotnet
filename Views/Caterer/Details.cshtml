@@ -1,0 +1,79 @@
+﻿@model Eproject.Models.viewCaterer
+@{
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+<head>
+    <style>
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .badge {
+            font-size: 14px;
+            padding: 0.5em 1em;
+        }
+
+        .btn {
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+  <div class="container py-5">
+   @*   <!-- Header Section -->
+     <div class="text-center mb-5">
+         <h1 class="display-4">@Model.Name</h1>
+         <p class="text-muted">Explore the details of this exceptional caterer</p>
+     </div> *@
+
+    <!-- Details Section -->
+    <div class="row">
+        <!-- Left Column: Image -->
+        <div class="col-lg-6 mb-4">
+            <div class="card border-0 shadow">
+               <img src="@Model.Photo" alt="@Model.Name" class="card-img-top rounded"> 
+            </div>
+        </div>
+
+        <!-- Right Column: Details -->
+        <div class="col-lg-6">
+            <h3 class="mb-4 text-primary">Caterer Details</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Caterer Name</strong> @Model.Name</li>
+                <li class="list-group-item"><strong>Place:</strong> @Model.Place</li>
+                <li class="list-group-item"><strong>Maximum Capacity:</strong> @Model.MaxPeople People</li>
+                <li class="list-group-item"><strong>Price per Person:</strong> $@Model.PricePerPerson</li>
+                <li class="list-group-item"><strong>Description:</strong> @Model.Description</li>
+            </ul>
+
+            <!-- Food Types -->
+            <div class="mt-4">
+                <h4>Food Types</h4>
+                @if (Model.CatererFoodtypes != null && Model.CatererFoodtypes.Any())
+                {
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach (var foodType in Model.CatererFoodtypes)
+                        {
+                            <span class="badge bg-info text-dark">@foodType.FoodType.FoodTypeName</span>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">No food types available.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Section -->
+    <div class="text-center mt-5">
+        <a asp-controller="Caterer" asp-action="Book" class="btn btn-success btn-lg px-4 me-2">
+            Book This Caterer
+        </a>
+        <a assp asp-controller="Website" asp-action="Home" class="btn btn-outline-secondary btn-lg px-4">
+            Back to List
+        </a>
+    </div>
+</div>

@@ -15,6 +15,7 @@ public partial class Caterer
     public int MaxPeople { get; set; }
 
     public string Description { get; set; } = null!;
+    public string imagePath { get; set; }
 
     public int PricePerPerson { get; set; }
 

@@ -17,18 +17,15 @@ namespace Eproject.Areas.Identity.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
-        public DbSet<Booking> bookings { get; set; }
         public DbSet<Foodtype> foodtypes { get; set; }
         public DbSet<Caterer> caterers { get; set; }
         public  DbSet<CatererFoodtype> CatererFoodtypes { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Booking>()
-        .Property(b => b.TotalPrice)
-        .HasPrecision(18, 2);
-
+       
 
 
 

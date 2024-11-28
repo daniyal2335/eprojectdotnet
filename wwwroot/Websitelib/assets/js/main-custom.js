@@ -2,7 +2,7 @@
 [Master Javascript]
 
 Template Name: Catering HTML Template 
-Version: 1.0.0
+Version: 1.0.0B
 Author: Kamleshyadav
 Website: https://www.pixelnx.com/
 Purchase: http://themeforest.net/user/kamleshyadav
@@ -292,7 +292,6 @@ Purchase: http://themeforest.net/user/kamleshyadav
             });
 
         },
-
 
         /*-----------------------------------------------------
                 Booking Form Submition
