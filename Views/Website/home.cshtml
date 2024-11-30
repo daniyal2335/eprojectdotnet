@@ -461,7 +461,7 @@
                                                             <a asp-controller="Caterer" asp-action="Details" asp-route-id="@caterer.CatererId" class="btn btn-outline-primary btn-sm me-2">
                                                             Details
                                                         </a>
-                                                        <a href="/Caterer/Book/@caterer.CatererId" class="btn btn-primary btn-sm">
+                                                        <a asp-controller="Caterer" asp-action="Create" class="btn btn-primary btn-sm">
                                                             Book
                                                         </a>
                                                     </div>
@@ -478,7 +478,6 @@
         </div>
     </div>
 </section>
-
     <!-- Booking -->
     <section class="cat-booking-wrapper" id="bookNow">
         <div class="container">
@@ -489,95 +488,70 @@
                         <span class="cat-shapp2"></span>
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="cat-heading-wrapper">
-                                <h4>
-                                    Book us
-                                </h4>
-                                <h2>
-                                    Where you want Our Services
-                                </h2>
+                                <h4>Book us</h4>
+                                <h2>Where you want Our Services</h2>
                             </div>
                         </div>
-                        <div class="cat-booking-from-inner">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">Select Country</option>
-                                            <option value="1">USA</option>
-                                            <option value="2">UK</option>
-                                            <option value="3">India</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">Select City</option>
-                                            <option value="1">Depend on Country</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">Select Palace</option>
-                                            <option value="1">Depend on City</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">Event Type</option>
-                                            <option value="1">Big Event</option>
-                                            <option value="1">Small Event</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">No. of People</option>
-                                            <option value="1">100-200</option>
-                                            <option value="2">200-300</option>
-                                            <option value="3">300-400</option>
-                                            <option value="3">400-1000</option>
-                                            <option value="3">1000-5000</option>
-                                            <option value="3">5000 +</option>
-                                        </select>
-                                    </div>
-                                </div>
+                      <form method="post" class="mt-4">
+    <div class="cat-booking-from-inner">
+        <div class="row g-3">
+            <!-- Venue -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <input type="text" name="booking.Venue" class="form-control" placeholder="Enter Venue" required maxlength="255" />
+                </div>
+            </div>
+            <!-- Customer Name -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <input type="text" name="booking.CustomerName" class="form-control" placeholder="Enter Customer Name" required maxlength="255" />
+                </div>
+            </div>
+            <!-- Customer Phone -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <input type="text" name="booking.CustomerPhone" class="form-control" placeholder="Enter Contact No." maxlength="15" />
+                </div>
+            </div>
+            <!-- Customer Email -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <input type="email" name="booking.CustomerEmail" class="form-control" placeholder="Enter Your Email" maxlength="255" />
+                </div>
+            </div>
+            <!-- Booking Date -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <input type="date" name="booking.BookingDate" class="form-control" placeholder="Select Date" required />
+                </div>
+            </div>
+            <!-- Caterer Selection -->
+            <div class="col-lg-4 col-md-6">
+                <div class="input-wrap">
+                    <select name="booking.CatererId" class="form-select" required>
+                        <option value="">Select Caterer</option>
+                        @if (Model.caterers != null && Model.caterers.Any())
+                        {
+                            foreach (var caterer in Model.caterers)
+                            {
+                                <option value="@caterer.CatererId">@caterer.Name</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="">No Caterers Available</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg mt-3">Send Request</button>
+            </div>
+        </div>
+    </div>
+</form>
 
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <select name="" id="" class="nice-selection">
-                                            <option value="0">Vegetarian</option>
-                                            <option value="1">Non Vegeterian</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="text" placeholder="Enter Contact No.">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="date" placeholder="Select Date">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="input-wrap">
-                                        <input type="text" placeholder="Enter Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                                    <a href="javascript:void(0);" class="cat-btn">
-                                        Send Request
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

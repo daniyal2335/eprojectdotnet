@@ -1,4 +1,5 @@
-﻿namespace Eproject.Models
+﻿
+namespace Eproject.Models
 {
     public class viewCategorymenuModel
     {
@@ -8,5 +9,8 @@
         public IEnumerable<Caterer> caterers { get; set; }
 
         public int SelectedCategoryId { get; set; }
+        public Booking Booking { get; set; }
+        public List<int> SelectedFoodTypeIds { get; internal set; } = new List<int>();
+
     }
 }

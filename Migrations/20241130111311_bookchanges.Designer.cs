@@ -4,6 +4,7 @@ using Eproject.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eproject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241130111311_bookchanges")]
+    partial class bookchanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,7 +118,8 @@ namespace Eproject.Migrations
 
                     b.Property<string>("CustomerEmail")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("CustomerName")
                         .IsRequired()
@@ -123,12 +127,8 @@ namespace Eproject.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("CustomerPhone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SelectedFoodTypeIds")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Venue")
                         .IsRequired()
@@ -136,6 +136,8 @@ namespace Eproject.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("BookingId");
+
+                    b.HasIndex("CatererId");
 
                     b.ToTable("Bookings");
                 });
@@ -223,9 +225,6 @@ namespace Eproject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FoodTypeId"));
 
-                    b.Property<int?>("BookingId")
-                        .HasColumnType("int");
-
                     b.Property<string>("FoodTypeName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -238,8 +237,6 @@ namespace Eproject.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("FoodTypeId");
-
-                    b.HasIndex("BookingId");
 
                     b.ToTable("foodtypes");
                 });
@@ -410,6 +407,17 @@ namespace Eproject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Eproject.Models.Booking", b =>
+                {
+                    b.HasOne("Eproject.Models.Caterer", "Caterer")
+                        .WithMany()
+                        .HasForeignKey("CatererId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Caterer");
+                });
+
             modelBuilder.Entity("Eproject.Models.CatererFoodtype", b =>
                 {
                     b.HasOne("Eproject.Models.Caterer", "Caterer")
@@ -427,13 +435,6 @@ namespace Eproject.Migrations
                     b.Navigation("Caterer");
 
                     b.Navigation("FoodType");
-                });
-
-            modelBuilder.Entity("Eproject.Models.Foodtype", b =>
-                {
-                    b.HasOne("Eproject.Models.Booking", null)
-                        .WithMany("SelectedFoodTypes")
-                        .HasForeignKey("BookingId");
                 });
 
             modelBuilder.Entity("Eproject.Models.MenuItem", b =>
@@ -496,11 +497,6 @@ namespace Eproject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Eproject.Models.Booking", b =>
-                {
-                    b.Navigation("SelectedFoodTypes");
                 });
 
             modelBuilder.Entity("Eproject.Models.Caterer", b =>

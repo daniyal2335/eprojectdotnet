@@ -6,27 +6,33 @@ namespace Eproject.Models
     public class Booking
     {
         [Key]
-        public int BookingId { get; set; }  
+        public int BookingId { get; set; }
 
-        [Required]
-        public DateTime BookingDate { get; set; } 
+        [Required(ErrorMessage = "Venue is required")]
+        [MaxLength(255, ErrorMessage = "Venue cannot be more than 255 characters")]
+        public string Venue { get; set; }
 
-        [Required]
-        [MaxLength(255)]
-        public string Venue { get; set; } 
+        [Required(ErrorMessage = "Customer name is required")]
+        [MaxLength(255, ErrorMessage = "Customer name cannot be more than 255 characters")]
+        public string CustomerName { get; set; }
 
-        [Required]
-        [MaxLength(255)]
-        public string CustomerName { get; set; } 
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+        public string CustomerEmail { get; set; }
 
-        [MaxLength(15)]
-        public string CustomerPhone { get; set; } = null!;  
+        [Phone(ErrorMessage = "Invalid phone number format")]
+        public string CustomerPhone { get; set; }
 
-        [MaxLength(255)]
-        public string CustomerEmail { get; set; } = null!;
+        [Required(ErrorMessage = "Booking date is required")]
+        public DateTime BookingDate { get; set; }
 
-        public int CatererId { get; set; } 
+        [Required(ErrorMessage = "Caterer is required")]
+        public int CatererId { get; set; }
+        // New Menu Field: List of FoodType Ids
+        [Required(ErrorMessage = "Menu selection is required")]
+        public List<int> SelectedFoodTypeIds { get; set; } = new List<int>(); // Default initialization
 
-        public  Caterer Caterer { get; set; }
+        // Navigation properties
+        public ICollection<Foodtype> SelectedFoodTypes { get; set; } = new List<Foodtype>(); // Default initialization
+
     }
 }

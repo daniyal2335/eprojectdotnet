@@ -1,0 +1,169 @@
+﻿@model Eproject.Models.viewCategorymenuModel
+<head>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</head>
+
+<section class="cat-booking-wrapper" id="bookNow">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cat-booking-form">
+                    <span class="cat-shapp"></span>
+                    <span class="cat-shapp2"></span>
+                    <div class="text-center">
+                        <div class="cat-heading-wrapper">
+                            <h4 class="text-uppercase">Book Us</h4>
+                            <h2 class="font-weight-bold">Where You Want Our Services</h2>
+                        </div>
+                    </div>
+
+                    <form method="post" class="mt-4">
+                        <input type="hidden" name="Booking.BookingId" value="@Model.Booking.BookingId" />
+                        <div class="cat-booking-from-inner">
+                            <div class="row g-3">
+                                <!-- Venue -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <input type="text" name="booking.Venue"
+                                               class="form-control"
+                                               placeholder="Enter Venue"
+                                               value="@Model.Booking.Venue"
+                                               required maxlength="255" />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.Venue)</span>
+
+                                    </div>
+                                </div>
+                                <!-- Customer Name -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <input type="text" name="Booking.CustomerName"
+                                               class="form-control"
+                                               placeholder="Enter Customer Name"
+                                               value="@Model.Booking.CustomerName"
+                                               required maxlength="255" />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerName)</span>
+
+                                                
+                                    </div>
+                                </div>
+                                <!-- Customer Email -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <input type="email" name="Booking.CustomerEmail"
+                                               class="form-control"
+                                               placeholder="Enter Your Email"
+                                               value="@Model.Booking.CustomerEmail"
+                                               maxlength="255" />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerEmail)</span>
+                                    </div>
+                                </div>
+                                <!-- Customer Phone -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <input type="text" name="Booking.CustomerPhone" class="form-control" value="@Model.Booking.CustomerPhone" placeholder="Enter Contact No." maxlength="15" />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerPhone)</span>
+
+                                    </div>
+                                </div>
+                                <!-- Booking Date -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <input type="date" name="Booking.BookingDate"
+                                               class="form-control"
+                                               placeholder="Select Date"
+                                               required />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.BookingDate)</span>
+
+                                    </div>
+                                </div>
+                                <!-- Caterer Selection -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <select name="Booking.CatererId" class="form-select" required>
+                                            <option value="">Select Caterer</option>
+                                            @if (Model?.caterers != null && Model.caterers.Any())
+                                            {
+                                                foreach (var caterer in Model.caterers)
+                                                {
+                                                    <option value="@caterer.CatererId">@caterer.Name</option>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <option value="">No Caterers Available</option>
+                                            }
+                                        </select>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CatererId)</span>
+                                    </div>
+
+                                </div>
+                                <!-- Food Type Selection -->
+<div class="col-lg-4 col-md-6">
+    <div class="input-wrap">
+        <label for="foodTypes">Select Food Types</label>
+        <div>
+            @if (Model.foodtypes != null)
+            {
+                @foreach (var foodType in Model.foodtypes)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Booking.SelectedFoodTypeIds" value="@foodType.FoodTypeId"
+                            @if (Model.Booking.SelectedFoodTypeIds != null && Model.Booking.SelectedFoodTypeIds.Contains(foodType.FoodTypeId))
+                            {
+                                @:checked
+                            }
+                        />
+                        <label class="form-check-label" for="foodType_@foodType.FoodTypeId">
+                            @foodType.FoodTypeName
+                        </label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No food types available.</p>
+            }
+        </div>
+        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.SelectedFoodTypeIds)</span>
+    </div>
+</div>
+
+                               
+
+                                
+                             
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg mt-3">Send Request</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}

@@ -21,18 +21,18 @@
 </head>
 
   <div class="container py-5">
-   @*   <!-- Header Section -->
+    <!-- Header Section -->
      <div class="text-center mb-5">
          <h1 class="display-4">@Model.Name</h1>
          <p class="text-muted">Explore the details of this exceptional caterer</p>
-     </div> *@
+     </div> 
 
     <!-- Details Section -->
     <div class="row">
         <!-- Left Column: Image -->
         <div class="col-lg-6 mb-4">
             <div class="card border-0 shadow">
-               <img src="@Model.Photo" alt="@Model.Name" class="card-img-top rounded"> 
+                <img src="@Model.existingImagePath" alt="@Model.Name" class="card-img-top rounded">
             </div>
         </div>
 
@@ -69,7 +69,7 @@
 
     <!-- Booking Section -->
     <div class="text-center mt-5">
-        <a asp-controller="Caterer" asp-action="Book" class="btn btn-success btn-lg px-4 me-2">
+        <a asp-controller="Caterer" asp-action="Create" class="btn btn-success btn-lg px-4 me-2">
             Book This Caterer
         </a>
         <a assp asp-controller="Website" asp-action="Home" class="btn btn-outline-secondary btn-lg px-4">

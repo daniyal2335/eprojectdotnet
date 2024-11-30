@@ -34,7 +34,7 @@ namespace Eproject.Controllers
                 MenuItems = menuItems,
                 SelectedCategoryId = selectedCategoryId,
                 foodtypes = foodTypes,
-                caterers=caterers
+                caterers=caterers,
             };
 
             ViewData["selectedCategoryId"] = selectedCategoryId;
