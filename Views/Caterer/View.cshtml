@@ -1,0 +1,65 @@
+﻿@model Eproject.Models.Booking
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1>View</h1>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Venue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Venue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Caterer.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CatererName)
+        </dd>
+     @*    <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SelectedFoodTypeNames)
+        </dt> *@
+        <dd class = "col-sm-10">
+            <ul>
+                @foreach (var foodType in Model.BookingFoodTypes)
+                {
+                    <li>@foodType.Foodtype.FoodTypeName</li>
+                }
+            </ul>
+        </dd>
+        <dd class="col-sm-10">
+               @Html.DisplayFor(model => model.Status)
+           </dd>
+    </dl>
+</div>

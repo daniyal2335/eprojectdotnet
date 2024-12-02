@@ -28,7 +28,7 @@
                         </div>
                     </div>
 
-                    <form method="post" class="mt-4">
+                    <form method="post" class="mt-4" asp-antiforgery="true">
                         <input type="hidden" name="Booking.BookingId" value="@Model.Booking.BookingId" />
                         <div class="cat-booking-from-inner">
                             <div class="row g-3">
@@ -40,7 +40,7 @@
                                                placeholder="Enter Venue"
                                                value="@Model.Booking.Venue"
                                                required maxlength="255" />
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.Venue)</span>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.Venue, "", new { @class = "text-danger" })</span>
 
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@
                                                placeholder="Enter Customer Name"
                                                value="@Model.Booking.CustomerName"
                                                required maxlength="255" />
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerName)</span>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerName, "", new { @class = "text-danger" })</span>
 
                                                 
                                     </div>
@@ -65,14 +65,14 @@
                                                placeholder="Enter Your Email"
                                                value="@Model.Booking.CustomerEmail"
                                                maxlength="255" />
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerEmail)</span>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerEmail, "", new { @class = "text-danger" })</span>
                                     </div>
                                 </div>
                                 <!-- Customer Phone -->
                                 <div class="col-lg-4 col-md-6">
                                     <div class="input-wrap">
-                                        <input type="text" name="Booking.CustomerPhone" class="form-control" value="@Model.Booking.CustomerPhone" placeholder="Enter Contact No." maxlength="15" />
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerPhone)</span>
+                                        <input type="text" name="Booking.CustomerPhone" class="form-control" value="@Model.Booking.CustomerPhone" placeholder="Enter Contact No." maxlength="11" />
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CustomerPhone, "", new { @class = "text-danger" })</span>
 
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                                class="form-control"
                                                placeholder="Select Date"
                                                required />
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.BookingDate)</span>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.BookingDate, "", new { @class = "text-danger" })</span>
 
                                     </div>
                                 </div>
@@ -104,40 +104,28 @@
                                                 <option value="">No Caterers Available</option>
                                             }
                                         </select>
-                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CatererId)</span>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.CatererId, "", new { @class = "text-danger" })</span>
                                     </div>
 
                                 </div>
-                                <!-- Food Type Selection -->
-<div class="col-lg-4 col-md-6">
-    <div class="input-wrap">
-        <label for="foodTypes">Select Food Types</label>
-        <div>
-            @if (Model.foodtypes != null)
-            {
-                @foreach (var foodType in Model.foodtypes)
-                {
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="Booking.SelectedFoodTypeIds" value="@foodType.FoodTypeId"
-                            @if (Model.Booking.SelectedFoodTypeIds != null && Model.Booking.SelectedFoodTypeIds.Contains(foodType.FoodTypeId))
-                            {
-                                @:checked
-                            }
-                        />
-                        <label class="form-check-label" for="foodType_@foodType.FoodTypeId">
-                            @foodType.FoodTypeName
-                        </label>
-                    </div>
-                }
-            }
-            else
-            {
-                <p>No food types available.</p>
-            }
-        </div>
-        <span class="text-danger">@Html.ValidationMessageFor(m => m.Booking.SelectedFoodTypeIds)</span>
-    </div>
-</div>
+                                <!-- Food Types Selection -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="input-wrap">
+                                        <label for="foodTypes">Select Food Types</label>
+                                        <div>
+                                            @foreach (var foodType in Model.foodtypes ?? Enumerable.Empty<Foodtype>())
+                                            {
+                                                <div>
+                                                    <input type="checkbox" name="SelectedFoodTypeNames" value="@foodType.FoodTypeName"
+                                                    @(Model.SelectedFoodTypeNames.Contains(foodType.FoodTypeName) ? "checked" : "") />
+                                                    <label>@foodType.FoodTypeName</label>
+                                                </div>
+                                            }
+                                        </div>
+                                        <span class="text-danger">@Html.ValidationMessageFor(m => m.SelectedFoodTypeNames, "", new { @class = "text-danger" })</span>
+                                    </div>
+                                </div>
+
 
                                
 

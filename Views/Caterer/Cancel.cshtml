@@ -1,0 +1,69 @@
+﻿@model Eproject.Models.Booking
+
+@{
+    ViewData["Title"] = "Cancel";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1>Cancel</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Venue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Venue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Caterer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Caterer.CatererId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SelectedFoodTypeNames)
+        </dt>
+        <dd class = "col-sm-10">
+            <ul>
+                @foreach (var foodType in Model.SelectedFoodTypeNames)
+                {
+                    <li>@foodType</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+    
+    <form asp-action="Cancel">
+        <input type="hidden" asp-for="BookingId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Create">Back to List</a>
+    </form>
+</div>

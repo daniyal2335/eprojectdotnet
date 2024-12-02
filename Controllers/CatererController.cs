@@ -22,7 +22,6 @@ namespace Eproject.Controllers
         {
             var caterers = _context.caterers.AsQueryable();
 
-            // Apply filters based on user input
             if (!string.IsNullOrEmpty(searchString))
             {
                 caterers = caterers.Where(c => c.Place.Contains(searchString));
@@ -38,13 +37,10 @@ namespace Eproject.Controllers
             //    caterers = caterers.Where(c => c.MaxPeople >= searchString);
             //}
 
-            // Execute the query and get the results
             var catererList = caterers.ToList();
 
-            // Pass the filtered list to the view
             ViewBag.Caterers = catererList;
 
-            // Return the search results view
             return View(catererList);
         }
 
@@ -63,7 +59,6 @@ namespace Eproject.Controllers
                 return NotFound();
             }
 
-            // Map to ViewModel if needed
             var viewModel = new viewCaterer
             {
                 CatererId = caterer.CatererId,
@@ -78,20 +73,19 @@ namespace Eproject.Controllers
 
             return View(viewModel);
         }
-        // Get the booking form (GET request)
+        [HttpGet]
         public IActionResult Create(int? bookingId)
         {
-            // Fetch logged-in user details
-            var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier); // Get UserId from claims
+            var userId = User?.FindFirstValue(ClaimTypes.NameIdentifier);
             var user = _context.Users.FirstOrDefault(u => u.Id == userId);
 
-            if (userId == null)
+            if (user == null)
             {
                 TempData["ErrorMessage"] = "User is not logged in. Please log in and try again.";
                 return RedirectToAction("Login", "Account");
             }
 
-            // Fetch admin-added caterers
+            // Fetch available caterers
             var adminCaterers = _context.caterers.Select(c => new SelectCatererViewModel
             {
                 CatererId = c.CatererId.ToString(),
@@ -99,7 +93,6 @@ namespace Eproject.Controllers
                 Source = "Admin"
             }).ToList();
 
-            // Fetch registered caterers
             var registeredCaterers = _context.Users
                 .Where(u => u.Role == "Caterer")
                 .Select(u => new SelectCatererViewModel
@@ -109,10 +102,10 @@ namespace Eproject.Controllers
                     Source = "Registered"
                 }).ToList();
 
-            // Combine both caterer lists
             var allCaterers = adminCaterers.Concat(registeredCaterers).ToList();
             var foodTypes = _context.foodtypes.ToList();
-            // Create the model
+
+            // Initialize model
             var model = new viewCategorymenuModel
             {
                 caterers = allCaterers.Select(c => new Caterer
@@ -125,7 +118,6 @@ namespace Eproject.Controllers
                     FoodTypeId = f.FoodTypeId,
                     FoodTypeName = f.FoodTypeName
                 }).ToList(),
-
                 Booking = new Booking
                 {
                     CustomerName = user.Name,
@@ -134,14 +126,17 @@ namespace Eproject.Controllers
                 }
             };
 
-            // If we have a booking ID, load the booking details for editing
             if (bookingId.HasValue)
             {
-                var booking = _context.Bookings.FirstOrDefault(b => b.BookingId == bookingId.Value);
+                var booking = _context.Bookings
+                    .Include(b => b.BookingFoodTypes)
+                    .ThenInclude(bf => bf.Foodtype)
+                    .FirstOrDefault(b => b.BookingId == bookingId.Value);
+
                 if (booking != null)
                 {
                     model.Booking = booking;
-                    model.SelectedFoodTypeIds = booking.SelectedFoodTypes.Select(ft => ft.FoodTypeId).ToList();// Populate the model with the existing booking details
+                    model.SelectedFoodTypeIds = booking.BookingFoodTypes.Select(bf => bf.FoodTypeId).ToList();
                 }
                 else
                 {
@@ -149,63 +144,61 @@ namespace Eproject.Controllers
                 }
             }
 
-            return View(model); // Pass the model to the view
+            return View(model);
         }
 
-        // Submit the booking (POST request)
         [HttpPost]
         public IActionResult Create(viewCategorymenuModel model)
         {
             if (ModelState.IsValid)
             {
-                TempData["ErrorMessage"] = "Form validation failed. Please check the fields and try again.";
+                TempData["ErrorMessage"] = "Please correct the errors in the form.";
+                return View(model);
+            }
+
+            if (model.SelectedFoodTypeNames == null || !model.SelectedFoodTypeNames.Any())
+            {
+                TempData["ErrorMessage"] = "Please select at least one food type.";
                 return View(model);
             }
 
             try
             {
-                // If BookingId exists, update the existing booking
-                if (model.Booking.BookingId > 0)
+                if (model.Booking.BookingId > 0) // Update existing booking
                 {
-                    var existingBooking = _context.Bookings.Include(b => b.SelectedFoodTypes)
-                                                            .FirstOrDefault(b => b.BookingId == model.Booking.BookingId);
-                    if (existingBooking == null)
-                    {
-                        TempData["ErrorMessage"] = "Booking not found.";
-                        return View(model);
-                    }
+                    var existingBooking = _context.Bookings
+                        .Include(b => b.BookingFoodTypes)
+                        .FirstOrDefault(b => b.BookingId == model.Booking.BookingId);
 
-                    // Ensure SelectedFoodTypes is initialized
-                    if (existingBooking.SelectedFoodTypes == null)
+                    if (existingBooking != null)
                     {
-                        existingBooking.SelectedFoodTypes = new List<Foodtype>();
-                    }
+                        existingBooking.Venue = model.Booking.Venue;
+                        existingBooking.CustomerName = model.Booking.CustomerName;
+                        existingBooking.CustomerPhone = model.Booking.CustomerPhone;
+                        existingBooking.CustomerEmail = model.Booking.CustomerEmail;
+                        existingBooking.BookingDate = model.Booking.BookingDate;
+                        existingBooking.CatererId = model.Booking.CatererId;
 
-                    // Update the existing booking
-                    existingBooking.Venue = model.Booking.Venue;
-                    existingBooking.CustomerName = model.Booking.CustomerName;
-                    existingBooking.CustomerPhone = model.Booking.CustomerPhone;
-                    existingBooking.CustomerEmail = model.Booking.CustomerEmail;
-                    existingBooking.BookingDate = model.Booking.BookingDate;
-                    existingBooking.CatererId = model.Booking.CatererId;
+                        // Update food types
+                        existingBooking.BookingFoodTypes.Clear(); // Clear existing food types before adding new ones
 
-                    // Update selected food types
-                    existingBooking.SelectedFoodTypes.Clear();
-                    foreach (var foodtypeId in model.Booking.SelectedFoodTypeIds)
-                    {
-                        var foodtype = _context.foodtypes.FirstOrDefault(f => f.FoodTypeId == foodtypeId);
-                        if (foodtype != null) // Only add if foodtype is found
+                        foreach (var foodTypeName in model.SelectedFoodTypeNames)
                         {
-                            existingBooking.SelectedFoodTypes.Add(foodtype);
+                            var foodType = _context.foodtypes.FirstOrDefault(f => f.FoodTypeName == foodTypeName);
+                            if (foodType != null)
+                            {
+                                existingBooking.BookingFoodTypes.Add(new BookingFoodType
+                                {
+                                    FoodTypeId = foodType.FoodTypeId
+                                });
+                            }
                         }
-                    }
 
-                    _context.Update(existingBooking);
-                    TempData["SuccessMessage"] = "Booking updated successfully!";
+                        _context.Update(existingBooking);
+                    }
                 }
-                else
+                else // Create new booking
                 {
-                    // If no BookingId, create a new booking
                     var newBooking = new Booking
                     {
                         Venue = model.Booking.Venue,
@@ -216,28 +209,24 @@ namespace Eproject.Controllers
                         CatererId = model.Booking.CatererId
                     };
 
-                    // Ensure SelectedFoodTypeIds is not null
-                    if (model.Booking.SelectedFoodTypeIds == null)
+                    foreach (var foodTypeName in model.SelectedFoodTypeNames)
                     {
-                        model.Booking.SelectedFoodTypeIds = new List<int>();
-                    }
-
-                    // Add selected food types
-                    foreach (var foodtypeId in model.Booking.SelectedFoodTypeIds)
-                    {
-                        var foodtype = _context.foodtypes.FirstOrDefault(f => f.FoodTypeId == foodtypeId);
-                        if (foodtype != null) // Only add if foodtype is found
+                        var foodType = _context.foodtypes.FirstOrDefault(f => f.FoodTypeName == foodTypeName);
+                        if (foodType != null)
                         {
-                            newBooking.SelectedFoodTypes.Add(foodtype);
+                            newBooking.BookingFoodTypes.Add(new BookingFoodType
+                            {
+                                FoodTypeId = foodType.FoodTypeId
+                            });
                         }
                     }
 
                     _context.Bookings.Add(newBooking);
-                    TempData["SuccessMessage"] = "Booking created successfully!";
                 }
 
                 _context.SaveChanges();
-                return RedirectToAction("Create"); // Redirect to avoid duplicate submissions
+                TempData["SuccessMessage"] = "Booking saved successfully!";
+                return RedirectToAction("Create");
             }
             catch (Exception ex)
             {
@@ -247,11 +236,93 @@ namespace Eproject.Controllers
         }
 
 
-        // GET: Booking Success Page
-        public IActionResult BookingSuccess()
+
+
+        public async Task<IActionResult> BookingList()
+        {
+            string currentUserEmail = User.Identity?.Name;
+
+            var bookings = await _context.Bookings
+                .Include(b => b.BookingFoodTypes)
+                    .ThenInclude(bf => bf.Foodtype)
+                .Include(b => b.Caterer)
+                .Where(b => b.CustomerEmail == currentUserEmail)
+                .ToListAsync();
+
+            var bookingList = bookings.Select(b => new Booking
             {
-                return View(); // Return a view that displays booking success confirmation
-            }
+                BookingId = b.BookingId,
+                Venue = b.Venue,
+                CustomerName = b.CustomerName,
+                CustomerEmail = b.CustomerEmail,
+                CustomerPhone = b.CustomerPhone,
+                BookingDate = b.BookingDate,
+                CatererName = b.Caterer.Name,
+                SelectedFoodTypeNames = b.BookingFoodTypes.Select(bf => bf.Foodtype.FoodTypeName).ToList()
+            }).ToList();
+
+            return View(bookingList);
         }
+        public async Task<IActionResult> View(int id)
+        {
+            var booking = await _context.Bookings
+                .Include(b => b.BookingFoodTypes)
+                    .ThenInclude(bf => bf.Foodtype)
+                .Include(b => b.Caterer)
+                .FirstOrDefaultAsync(b => b.BookingId == id);
+
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new Booking
+            {
+                BookingId = booking.BookingId,
+                Venue = booking.Venue,
+                CustomerName = booking.CustomerName,
+                CustomerEmail = booking.CustomerEmail,
+                CustomerPhone = booking.CustomerPhone,
+                BookingDate = booking.BookingDate,
+                CatererName = booking.Caterer.Name,
+                Status = booking.Status,
+                SelectedFoodTypeNames = booking.BookingFoodTypes.Select(bf => bf.Foodtype.FoodTypeName).ToList()
+            };
+
+            return View(viewModel);
+        }
+        public async Task<IActionResult> Cancel(int id)
+        {
+            var booking = await _context.Bookings.FindAsync(id);
+
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            booking.Status = "Cancelled";
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(BookingList));
+        }
+        [HttpPost]
+        public async Task<IActionResult> CancelConfirmed(int id)
+        {
+            var booking = await _context.Bookings.FindAsync(id);
+
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            booking.Status = "Cancelled";
+            await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Booking has been successfully canceled.";
+            return RedirectToAction(nameof(BookingList)); 
+        }
+
+
     }
+}
 

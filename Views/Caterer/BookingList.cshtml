@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Eproject.Models.Booking>
+
+@{
+    ViewData["Title"] = "BookingList";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<h1>BookingList</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Venue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Caterer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelectedFoodTypeNames)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Venue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPhone)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.BookingDate)
+            </td>
+                <td> @Html.DisplayFor(modelItem =>@item.CatererName)</td>
+                <td>
+                    <ul>
+                        @foreach (var foodType in item.BookingFoodTypes)
+                        {
+                            <li>@foodType.Foodtype.FoodTypeName</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <a asp-action="View" asp-route-id="@item.BookingId" class="btn btn-info">View</a> |
+                    <a asp-action="Cancel" asp-route-id="@item.BookingId" class="btn btn-danger">Cancel</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

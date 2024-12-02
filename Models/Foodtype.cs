@@ -14,5 +14,7 @@ namespace Eproject.Models
         public string imagePath {  get; set; }
         // Navigation property for CatererFoodtypes
         public ICollection<CatererFoodtype> CatererFoodtypes { get; set; }
+
+        public ICollection<BookingFoodType> BookingFoodTypes { get; set; } = new List<BookingFoodType>();
     }
 }

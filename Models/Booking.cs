@@ -5,6 +5,8 @@ namespace Eproject.Models
 {
     public class Booking
     {
+        internal object caterer;
+
         [Key]
         public int BookingId { get; set; }
 
@@ -27,12 +29,14 @@ namespace Eproject.Models
 
         [Required(ErrorMessage = "Caterer is required")]
         public int CatererId { get; set; }
-        // New Menu Field: List of FoodType Ids
+        public virtual Caterer Caterer { get; set; }
         [Required(ErrorMessage = "Menu selection is required")]
-        public List<int> SelectedFoodTypeIds { get; set; } = new List<int>(); // Default initialization
+        public List<string> SelectedFoodTypeNames { get; set; } = new List<string>();  
 
-        // Navigation properties
-        public ICollection<Foodtype> SelectedFoodTypes { get; set; } = new List<Foodtype>(); // Default initialization
-
+        public ICollection<BookingFoodType> BookingFoodTypes { get; set; } = new List<BookingFoodType>();
+        [NotMapped]
+        public string CatererName { get; set; }
+        [MaxLength(50)]
+        public string Status { get; set; } = "Pending";
     }
 }
